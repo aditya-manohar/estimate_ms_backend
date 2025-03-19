@@ -9,7 +9,7 @@ import (
 var DB *sqlx.DB
 
 func InitDB() error {
-    connStr := "user=postgres dbname=estimate_system sslmode=disable password=getout612"
+    connStr := "postgresql://estimate_db_user:zekyt5RN7h4El28cCHwzuTIUQePQmI1y@dpg-cvdf901c1ekc73e0vj30-a.oregon-postgres.render.com/estimate_db"
     var err error
     DB, err = sqlx.Connect("postgres", connStr)
     if err != nil {
